@@ -4,8 +4,6 @@
 
 (C) 1999-2017 Sebastien GODARD (sysstat (at) orange (dot) fr)
 
-ik2sb
-
 ### Introduction
 
 The sysstat package contains various utilities, common to many commercial Unixes, to monitor system performance and usage activity:

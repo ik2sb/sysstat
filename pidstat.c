@@ -32,6 +32,7 @@
 #include <sys/utsname.h>
 #include <regex.h>
 #include <linux/sched.h>
+#include <time.h>
 
 #include "version.h"
 #include "pidstat.h"
@@ -2537,8 +2538,8 @@ void rw_pidstat_loop(int dis_hdr, int rows)
 		}
 
 		if (count) {
-
-			pause();
+			//pause();
+            usleep(100000);
 
 			if (sigint_caught) {
 				/* SIGINT signal caught => Display average stats */
@@ -2576,6 +2577,8 @@ int main(int argc, char **argv)
 	struct utsname header;
 	int rows = 23;
 	char *t;
+
+
 
 #ifdef USE_NLS
 	/* Init National Language Support */
@@ -2809,6 +2812,7 @@ int main(int argc, char **argv)
 		else {
 			usage(argv[0]);
 		}
+
 	}
 
 	if (interval < 0) {
